@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: linear-gradient(to top, #b2f2b2, #e6e6fa);
+
+}
+
+form {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: calc(100% - 10px); /* Add some spacing */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;  /* Permite redimensionar verticalmente */
+}
+
+select {
+    -webkit-appearance: none; /* Remove seta padrão do select */
+   -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 10px center; /* Adiciona uma seta customizada */
+    padding-right: 30px; /* Ajusta o padding para a seta */
+}
+
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para os grupos de campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+p {  /* Remove a margem padrão dos parágrafos */
+    margin: 0;
+}
+
+#aceite_termos { /* Estiliza a checkbox */
+    margin-right: 5px;
+}
