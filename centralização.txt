@@ -1,0 +1,15 @@
+.login-items {
+    /* ... outros estilos ... */
+    display: flex; /* Já estava presente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    flex-direction: column; /* Mantém o .login centralizado horizontalmente após outras mudanças */
+}
+
+.login {
+    /* ... outros estilos ... */
+    margin: 0 auto; /* Remove as margens, não mais necessário */
+    margin-top: 0; /* Importante: remove a margem superior automática */
+    margin-bottom: 0; /* Importante: remove a margem inferior automática */
+
+}
