@@ -19,6 +19,7 @@ h2, h3 {
     color: #333;
 }
 
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -32,25 +33,25 @@ input[type="number"],
 input[type="url"],
 select,
 textarea {
-    width: calc(100% - 10px); /* Add some spacing */
+    width: calc(100% - 10px); 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    box-sizing: border-box; 
 }
 
 textarea {
     height: 120px;
-    resize: vertical;  /* Permite redimensionar verticalmente */
+    resize: vertical;  
 }
 
 select {
-    -webkit-appearance: none; /* Remove seta padrão do select */
+    -webkit-appearance: none; 
    -moz-appearance: none;
     appearance: none;
     background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 10px center; /* Adiciona uma seta customizada */
-    padding-right: 30px; /* Ajusta o padding para a seta */
+    padding-right: 30px; 
 }
 
 
@@ -62,7 +63,7 @@ input[type="reset"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px; /* Espaçamento entre os botões */
+    margin-right: 10px; 
 }
 
 input[type="submit"]:hover,
@@ -70,15 +71,21 @@ input[type="reset"]:hover {
     background-color: #45a049;
 }
 
-/* Estilos para os grupos de campos */
 .form-group {
     margin-bottom: 20px;
 }
 
-p {  /* Remove a margem padrão dos parágrafos */
+p {  
     margin: 0;
 }
 
-#aceite_termos { /* Estiliza a checkbox */
+#aceite_termos { 
     margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.aceitacao-termos {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
 }
