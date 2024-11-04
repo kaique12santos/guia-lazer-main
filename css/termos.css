@@ -1,5 +1,7 @@
+@charset "UTF8";
 .container {
-    max-width: 800px; 
+    max-width: 60%;
+    height: auto;
     margin: 0 auto; 
     padding: 20px; 
     background-color: #ffffff; 

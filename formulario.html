@@ -6,6 +6,7 @@
     <title>Formulario de inscrição</title>
     <style>@import url(css/form.css);</style>
     <script src="Javascript/script.js"></script>
+    <link rel="shortcut icon" href="imagens/logo12.jpg" type="image/x-icon">
 </head>
 <body>
     <form action="#" method="post" onsubmit="enviarFormulario(event)" id="formularioCadastro">
@@ -13,22 +14,22 @@
 
         
         <label>Nome:</label>
-        <input type="text" id="txt_nome" maxlength="50" placeholder="informe o nome completo" required><p></p>
+        <input type="text" id="txt_nome" maxlength="50" placeholder="informe o nome completo" required>
         
         <label>E-mail: </label>
-        <input type="email" name="email" id="txt_email" placeholder="seuemail@gmail.com" required><p></p>
+        <input type="email" name="email" id="txt_email" placeholder="seuemail@gmail.com" required>
         
         <label>Telefone:</label>
-        <input type="tel" id="txt_tel" maxlength="15" placeholder="(00) 00000-0000" oninput="mascaraTelefone(this)"><p></p>
+        <input type="tel" id="txt_tel" maxlength="15" placeholder="(00) 00000-0000" oninput="mascaraTelefone(this)">
 
         
         <h3>Detalhes do Comércio</h3>
         <label>Nome do Comércio: </label>
-        <input type="text" name="nomeComercio" id="txt_nomeComercio" placeholder="Nome do seu comércio" required><p></p>
+        <input type="text" name="nomeComercio" id="txt_nomeComercio" placeholder="Nome do seu comércio" required>
 
         <label>Tipo de Comércio:</label>
         <select name="tiposComercio" id="sel_ling" required>
-            <option></option>
+            <option>selecione</option>
             <option>Restaurante</option>
             <option>Bar</option>
             <option>Centro de Entretenimento</option>
@@ -40,49 +41,49 @@
         </select><p></p>
 
         <label>Horário de Funcionamento:</label>
-        <input type="text" name="horarioFuncionamento" placeholder="Ex: Segunda a sexta das 8h às 22h" required><p></p>
+        <input type="text" name="horarioFuncionamento" placeholder="Ex: Segunda a sexta das 8h às 22h" required>
 
         
         <h3>Localização do Comércio</h3>
         <label>Endereço: </label>
-        <input type="text" name="enderecoComercio" id="txt_EnderecoComercio" placeholder="Ex: Rua das Flores, nº 123" required><br><br>
+        <input type="text" name="enderecoComercio" id="txt_EnderecoComercio" placeholder="Ex: Rua das Flores, nº 123" required>
 
         <label>Número: </label>
-        <input type="number" name="enderecoNumero" id="txt_enderecoNumero" placeholder="Ex: 123" required><p></p>
+        <input type="number" name="enderecoNumero" id="txt_enderecoNumero" placeholder="Ex: 123" required>
 
         <label>Complemento: </label>
-        <input type="text" name="Complemento" id="txt_Complemento" placeholder="caso não tenha deixar em branco"><p></p>
+        <input type="text" name="Complemento" id="txt_Complemento" placeholder="caso não tenha deixar em branco">
 
         <label>Bairro: </label>
-        <input type="text" name="Bairro" id="txt_Bairro" placeholder="Nome do bairro" required><p></p>
+        <input type="text" name="Bairro" id="txt_Bairro" placeholder="Nome do bairro" required>
 
         <label>CEP: </label>
-        <input type="text" name="CEP" id="txt_CEP" maxlength="9" placeholder="Ex: 00000-000" required oninput="mascaraCEP(this)"><p></p>
+        <input type="text" name="CEP" id="txt_CEP" maxlength="9" placeholder="Ex: 00000-000" required oninput="mascaraCEP(this)">
 
         
         <h3>Descrição dos Produtos/Serviços</h3>
         <label>Descrição do Comércio</label><br>
-        <textarea placeholder="Descreva o comércio, suas atividades oferecidas/serviços" maxlength="1250" name="descricaoComercio"  required></textarea><br><br>
+        <textarea placeholder="Descreva o comércio, suas atividades oferecidas/serviços" maxlength="1250" name="descricaoComercio"  required></textarea>
 
         
         <h3>Redes Sociais e Site</h3>
         <label>Website: </label>
-        <input type="url" name="websiteComercio" placeholder="Ex: http://www.seusite.com"><p></p>
+        <input type="url" name="websiteComercio" placeholder="Ex: http://www.seusite.com">
 
         <label>Instagram: </label>
-        <input type="url" name="instagramComercio" placeholder="Ex: https://www.instagram.com/seunegocio"><p></p>
+        <input type="url" name="instagramComercio" placeholder="Ex: https://www.instagram.com/seunegocio">
 
         <label>Facebook: </label>
-        <input type="url" name="facebookComercio" placeholder="Ex: https://www.facebook.com/seunegocio"><p></p>
+        <input type="url" name="facebookComercio" placeholder="Ex: https://www.facebook.com/seunegocio">
 
         <label>TikTok: </label>
-        <input type="url" name="tiktokComercio" placeholder="Ex: https://www.tiktok.com/seunegocio"><p></p>
+        <input type="url" name="tiktokComercio" placeholder="Ex: https://www.tiktok.com/seunegocio">
 
         <label>X: </label>
-        <input type="url" name="XComercio" placeholder="Ex: https://x.com/seunegocio"><p></p>
+        <input type="url" name="XComercio" placeholder="Ex: https://x.com/seunegocio">
 
-        <label for="imagens">Envie até 5 imagens do comércio:</label><br>
-        <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple><br><br>
+        <label for="imagens">Envie até 5 imagens do comércio:</label>
+        <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple>
         
        
         <h3>Aceitação dos Termos</h3>
@@ -90,7 +91,7 @@
             <input type="checkbox" id="aceite_termos" name="aceite_termos" required>
             <label for="aceite_termos" >Eu concordo com os <a href="termos_condicoes.html" target="_blank" rel="noopener noreferrer">termos e condições</a>.</label>
         </div>
-        <br><br>
+        
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
     </form>

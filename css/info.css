@@ -137,16 +137,16 @@ footer {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
-    max-width: 900px; 
+    max-width: 98.15%;
     margin: 0 auto; 
     color: #000000;
 }
 
 
 .footer-section {
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
+    width: 23.97%; 
+    margin-bottom: 20px; 
+    text-align: center; 
 }
 
 .footer-section h3 {
