@@ -271,9 +271,9 @@ footer {
     height: auto;     /* Mantém a proporção da imagem */
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-    
+    /* Configurações gerais para mobile */
     body {
         padding: 10px;
     }
@@ -291,19 +291,15 @@ footer {
         gap: 10px;
     }
 
-    /* Box de busca */
-    .box-search {
-        width: 100%;
-        padding: 8px;
-    }
-
-    input[type="search"] {
-        width: 60%;
+    /* Botão de menu */
+    .menu-button {
+        display: block;
+        background-color: #78daa8;
+        border: none;
+        color: white;
+        font-size: 20px;
         padding: 10px;
-    }
-
-    .search-button {
-        padding: 8px;
+        cursor: pointer;
     }
 
     /* Logo */
@@ -311,12 +307,50 @@ footer {
         margin-left: 0;
         padding: 5px;
     }
+
     .img1 {
-        width: 150px;
-        height: 80px;
+        width: 80px; /* Reduz o tamanho do logo */
+        height: auto;
     }
 
-    /* Box Highlight */
+    /* Caixa de pesquisa */
+    .box-search {
+        display: flex;
+        flex-direction: row; /* Garante o botão de pesquisa ao lado */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 8px;
+    }
+
+    input[type="search"] {
+        width: 60%;
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .search-button {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Configuração inicial dos botões de header e da caixa de pesquisa */
+    .header-buttons,
+    .box-search {
+        display: none; /* Oculta no mobile inicialmente */
+    }
+
+    /* Exibição ao ativar o menu */
+    .header-buttons.show,
+    .box-search.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Destaque de Conteúdo */
     .box-highlight {
         flex-direction: column;
         padding: 10px;
@@ -355,64 +389,8 @@ footer {
     .social a {
         margin: 5px;
     }
-    .menu-button {
-        display: block;
-        background-color: #78daa8;
-        border: none;
-        color: white;
-        font-size: 20px;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    /* Ocultar os botões de header e a caixa de pesquisa inicialmente */
-    .header-buttons,
-    .box-search {
-        display: none;
-    }
-
-    /* Configuração de exibição dos botões do header e da caixa de pesquisa ao ativar o menu */
-    .header-buttons.show,
-    .box-search.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Ajuste de tamanho do título e do logo para um header mais compacto */
-    .compact-header .logo h1 {
-        font-size: 1.2em; /* Reduz o tamanho do título */
-        margin: 0;        /* Remove margens adicionais */
-        text-align: center;
-    }
-
-    .compact-header .img1 {
-        width: 80px; /* Reduz a largura do logo */
-        height: auto; /* Mantém a proporção */
-    }
-
-    /* Garantir layout da caixa de pesquisa com o botão ao lado */
-    .box-search {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Ajustar o tamanho da caixa de pesquisa e o botão de pesquisa no mobile */
-    .box-search input[type="search"] {
-        width: 60%; /* Reduz a largura da caixa de pesquisa */
-        font-size: medium;
-    }
-
-    .search-button {
-        padding: 5px; /* Reduz o padding do botão de pesquisa */
-    }
-
-    /* Configurações específicas para o footer */
-    .footer-section {
-        width: 100%; /* Footer em uma coluna no mobile */
-    }
 }
+
 
 
 
