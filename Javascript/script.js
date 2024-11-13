@@ -56,3 +56,19 @@ function mascaraCEP(cep) {
         .replace(/\D/g, '') 
         .replace(/(\d{5})(\d)/, '$1-$2');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona o botão de menu
+    const menuToggle = document.getElementById("menuToggle");
+
+    // Seleciona os elementos para mostrar/ocultar
+    const headerButtons = document.querySelector(".header-buttons");
+    const boxSearch = document.querySelector(".box-search");
+
+    // Adiciona o evento de clique ao botão de menu
+    menuToggle.addEventListener("click", function() {
+        // Alterna a classe "show" nos elementos
+        headerButtons.classList.toggle("show");
+        boxSearch.classList.toggle("show");
+    });
+});
