@@ -314,11 +314,9 @@ footer {
     }
 
     /* Caixa de pesquisa */
-    .search-button {
+    .box-search {
         display: flex;
-        flex-direction: row; /* Garante o botão de pesquisa ao lado */
         justify-content: center;
-        align-items: center;
         width: 100%;
         padding: 8px;
     }
@@ -327,13 +325,6 @@ footer {
         width: 60%;
         padding: 10px;
         font-size: medium;
-    }
-
-    .search-button {
-        padding: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     /* Configuração inicial dos botões de header e da caixa de pesquisa */
@@ -390,6 +381,7 @@ footer {
         margin: 5px;
     }
 }
+
 
 
 
