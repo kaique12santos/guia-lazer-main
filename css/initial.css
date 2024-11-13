@@ -4,15 +4,20 @@
     margin: 0;
 }
 
+
 body{
     background-color:#f4f4ffff;
+    width: 100vw; 
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
 }
 
 header{
     background-color: #78daa8;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     
 }
 .box-search {
@@ -33,7 +38,7 @@ input[type="search"] {
     width: 70%;
     border: 1px solid #ccc; 
     margin-right: 10px; 
-    width: 100%;
+    
 }
 
 .search-button {
@@ -75,7 +80,8 @@ input[type="search"] {
 
 h1{
     color: #e04938;
-    margin: 1px;
+    font-size: 2.06em;
+    
 }
 
 .logo{
@@ -90,12 +96,7 @@ h1{
 
 
 
-input[type="search"]{
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: larger;
-    width: 70%;
-}
+
 
 h2{
     font-family: Arial, Helvetica, sans-serif;
@@ -177,11 +178,13 @@ h2{
 
 
 footer {
+    width: 100%;
     background-color: #78daa8;
     color: #333;
     padding: 30px 0; 
     font-family: sans-serif; 
     margin-top: 1%;
+
 }
 
 .footer-content {
@@ -192,7 +195,6 @@ footer {
     margin: 0 auto; 
     color: #000000;
 }
-
 
 .footer-section {
     width: 23.97%; 
@@ -248,4 +250,88 @@ footer {
     transition: 0.5s;
   }
 
+  @media (max-width: 768px) {
+
+    
+    body {
+        padding: 10px;
+    }
+
+    header {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    
+    .box-search {
+        width: 100%;
+        padding: 8px;
+    }
+
+    input[type="search"] {
+        width: 60%;
+        padding: 10px;
+    }
+
+    .search-button {
+        padding: 8px;
+    }
+
+   
+    .logo {
+        margin-left: 0;
+        padding: 5px;
+    }
+    .img1 {
+        width: 150px;
+        height: 80px;
+    }
+
+  
+    .box-highlight {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .highlight-image {
+        width: 200px;
+        height: auto;
+    }
+
+  
+    .places {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+
+    
+    .social {
+        font-size: 24px;
+    }
+
+    .social a {
+        margin: 5px;
+    }
+}
 
