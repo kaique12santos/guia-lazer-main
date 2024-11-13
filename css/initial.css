@@ -370,4 +370,26 @@ footer {
     }
 }
 
+.compact-header .logo h1 {
+    font-size: 1.2em; /* Reduz o tamanho do título */
+    margin: 0;        /* Remove margens adicionais */
+    text-align: center;
+}
+
+.compact-header .img1 {
+    width: 80px;      /* Reduz a largura da imagem do logo */
+    height: auto;     /* Mantém a proporção da imagem */
+}
+
+@media (max-width: 768px) {
+    /* Garantir que a exibição inicial do logo e título seja grande */
+    .logo h1 {
+        font-size: 2.06em; /* Tamanho original do título */
+    }
+
+    .img1 {
+        width: 200px; /* Tamanho original do logo */
+    }
+}
+
 

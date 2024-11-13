@@ -61,14 +61,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // Seleciona o botão de menu
     const menuToggle = document.getElementById("menuToggle");
 
-    // Seleciona os elementos para mostrar/ocultar
+    // Seleciona os elementos a serem exibidos ou ocultados
     const headerButtons = document.querySelector(".header-buttons");
     const boxSearch = document.querySelector(".box-search");
+    const header = document.querySelector("header"); // Seleciona o header para a classe compacta
 
     // Adiciona o evento de clique ao botão de menu
     menuToggle.addEventListener("click", function() {
         // Alterna a classe "show" nos elementos
         headerButtons.classList.toggle("show");
         boxSearch.classList.toggle("show");
+
+        // Alterna a classe "compact-header" no header para reduzir o tamanho do título e logo
+        header.classList.toggle("compact-header");
     });
 });
