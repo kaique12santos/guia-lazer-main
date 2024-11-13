@@ -311,10 +311,13 @@ footer {
         margin-left: 0;
         padding: 5px;
     }
+    .logo2{
+        width: 100%;
+    }
 
     .img1 {
-        width: 80px; 
-        height: auto;
+        width: 30%; 
+        height: 100%;
     }
 
    
