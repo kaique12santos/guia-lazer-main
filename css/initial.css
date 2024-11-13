@@ -314,7 +314,7 @@ footer {
     }
 
     /* Caixa de pesquisa */
-    .box-search {
+    .search-button {
         display: flex;
         flex-direction: row; /* Garante o botão de pesquisa ao lado */
         justify-content: center;
