@@ -334,6 +334,22 @@ footer {
         margin: 5px;
     }
     
+    .box-search {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Ajusta a caixa de pesquisa para ocupar menos espaço no mobile */
+    .box-search input[type="search"] {
+        width: 60%; /* Reduz a largura da caixa de pesquisa no mobile */
+        font-size: medium;
+    }
+
+    /* Botão de pesquisa ajustado para o mobile */
+    .search-button {
+        padding: 5px; /* Reduz o padding para se ajustar ao tamanho menor */
+    }
 }
 
 .menu-button {
