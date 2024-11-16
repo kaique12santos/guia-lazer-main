@@ -57,7 +57,7 @@ function mascaraCEP(cep) {
         .replace(/(\d{5})(\d)/, '$1-$2');
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Seleciona o botão de menu
     const menuToggle = document.getElementById("menuToggle");
 
@@ -66,13 +66,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const boxSearch = document.querySelector(".box-search");
     const header = document.querySelector("header"); // Seleciona o header para a classe compacta
 
+    // Seleciona o h1 e o h2
+    const h1 = document.querySelector(".logo h1");
+    const h2 = document.querySelector(".titulo-mobile");
+
     // Adiciona o evento de clique ao botão de menu
-    menuToggle.addEventListener("click", function() {
+    menuToggle.addEventListener("click", function () {
         // Alterna a classe "show" nos elementos
         headerButtons.classList.toggle("show");
         boxSearch.classList.toggle("show");
 
-        // Alterna a classe "compact-header" no header para reduzir o tamanho do título e logo
+        // Alterna a classe "compact-header" no header
         header.classList.toggle("compact-header");
+
+        // Verifica se a classe compact-header está ativa
+        if (header.classList.contains("compact-header")) {
+            // Substitui o texto do h1 pelo texto do h2
+            h1.textContent = h2.textContent;
+            // Ajusta o tamanho do h1
+            h1.style.fontSize = "1em";
+        } else {
+            // Restaura o texto e o tamanho do h1 ao estado original
+            h1.textContent = "Guia Lazer SP";
+            h1.style.fontSize = ""; // Remove estilo inline
+        }
     });
 });
