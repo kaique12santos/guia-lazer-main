@@ -92,3 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+const video = document.getElementById("videoIntro");
+        
+        // Ajusta a taxa de reprodução (1.0 é normal, valores menores tornam o vídeo mais lento)
+        video.playbackRate = 0.5;

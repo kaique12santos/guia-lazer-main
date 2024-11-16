@@ -13,10 +13,12 @@ html, body {
     flex-direction: column; /* Organiza os elementos em coluna */
     min-height: 100vh; /* Faz a div ocupar a altura total da viewport */
     width: 100%; /* Faz a div ocupar toda a largura */
-    background-color: #f4f4ff; /* Cor de fundo */
+    
+    /* background-image: url('../imagens/fundo_tela.jpeg');*/ /* Cor de fundo */
 }
 
 header{
+    
     background-color: #78daa8;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
@@ -45,18 +47,24 @@ input[type="search"] {
     border-radius: 50px;
     padding: 15px 20px;
     font-size: larger;
-    width: 70%;
+    width: 80%;
+    height: 30%;
     border: 1px solid #ccc; 
     margin-right: 10px; 
     
 }
 
 .search-button {
+    display: flex;             /* Usando flexbox para centralizar o conteúdo */
+    justify-content: center;   /* Centraliza a imagem horizontalmente */
+    align-items: center; 
     background-color: #36A67D;
+    height: 30%;
     border: none; 
     border-radius: 50px; 
     padding: 10px; 
     cursor: pointer; 
+    
 }
 
 .search-button i {
@@ -143,7 +151,7 @@ h2{
 }
 
 .box-highlight-bg{
-    background-color:rgb(244, 244, 244);
+    background-color:whitesmoke;
     border-radius: 15px;
     padding: 15px 25px 30px;
     height: 100%;
@@ -166,6 +174,7 @@ h2{
 }
 
 .places{
+    margin: 2px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +284,7 @@ footer {
 
 .compact-header .img1 {
     width: 20%;      /* Reduz a largura da imagem do logo */
-    height: auto;     /* Mantém a proporção da imagem */
+    height: 100%;     /* Mantém a proporção da imagem */
 }
 .titulo-mobile{
     display: none;
@@ -322,6 +331,9 @@ footer {
         font-size: 20px;
         padding: 0;
         cursor: pointer;
+    }
+    .paragrafo-h1{
+        display: none;
     }
 
 

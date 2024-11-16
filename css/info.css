@@ -1,12 +1,17 @@
 @charset "UTF8";
-*{
-    padding: 0;
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o body sempre tenha 100% da altura */
+    box-sizing: border-box;
 }
 
-body{
-    background-color:#f4f4ffff;
-    font-family: Arial, Helvetica, sans-serif;
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Faz a div ocupar a altura total da viewport */
+    width: 100%; /* Faz a div ocupar toda a largura */
+    background-color: #f4f4ff; /* Cor de fundo */
 }
 
 header{

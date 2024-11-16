@@ -1,12 +1,50 @@
 @charset "UTF8";
-*{
-    margin: 0; 
-    padding: 0; 
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o body sempre tenha 100% da altura */
+    box-sizing: border-box;
+    
 }
 
-body{
-    background-color:#f4f4ffff;
+.content-wrapper {
+    justify-content: space-between;
+     /* Centraliza horizontalmente */
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Faz a div ocupar a altura total da viewport */
+    width: 100%; /* Faz a div ocupar toda a largura */
+    background-color: #fcfcfc; /* Cor de fundo */
+}
+
+.introducao {
     
+    height: 150px; /* Altura da faixa no final */
+    width: 100%; /* Ocupa toda a largura da página */
+    display: flex; /* Centraliza o vídeo dentro da div */
+    align-items: center; /* Alinha verticalmente o vídeo no centro */
+    justify-content: center; /* Alinha horizontalmente o vídeo no centro */
+    position: relative; /* Permite controle sobre o posicionamento */
+    overflow: hidden; /* Garante que o vídeo não extrapole a área */
+}
+
+video {
+    width: 100%; /* Preenche toda a largura da div */
+    height: 100%; /* Preenche toda a altura da div */
+    object-fit: cover; /* Faz o vídeo preencher a área proporcionalmente */
+    position: absolute; /* Garante que o vídeo permaneça fixo dentro da faixa */
+}
+.faq-container {
+    text-align: center;
+    width: 98%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+    padding: 15px 0px 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header{
@@ -17,6 +55,7 @@ header{
 }
 .titulo{
     color: #e04938;
+    margin: 0;
 }
 .logo{
     margin-left: auto;
@@ -97,20 +136,13 @@ footer {
   }
 
 
-.faq-container {
-    max-width: 98%;
-    height: auto; 
-    overflow: auto;
-    background-color: rgba(248, 243, 243, 0.911);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
+
 
 h1 {
     text-align: center;
     margin-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #333;
 }
