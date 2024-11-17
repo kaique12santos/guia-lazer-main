@@ -14,7 +14,7 @@ html, body {
     min-height: 100vh; /* Faz a div ocupar a altura total da viewport */
     width: 100%; /* Faz a div ocupar toda a largura */
     
-    /* background-image: url('../imagens/fundo_tela.jpeg');*/ /* Cor de fundo */
+    /* background-image: url('../imagens/fundo_tela.jpeg'); /* Cor de fundo */
 }
 
 header{

@@ -178,3 +178,77 @@ h1 {
     font-size: 1.25em;
     color: #0073e6;
 }
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .paragrafo-h1{
+        display: none;
+    }
+    
+
+   
+
+    .faq-container {
+        width: 95%;
+        padding: 10px;
+        font-size: 0.9em; /* Texto menor */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .img1 {
+        height: 80px; /* Reduz a altura */
+    }
+
+    footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%; /* Cada seção ocupa 100% */
+        margin-bottom: 10px;
+    }
+
+    .social {
+        font-size: 1.5em; /* Reduz o tamanho dos ícones sociais */
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ajuste do título */
+        margin-bottom: 15px;
+    }
+
+    .faq-question {
+        font-size: 0.9em; /* Reduz o tamanho da pergunta */
+        padding: 8px 15px;
+    }
+
+    .faq-answer {
+        font-size: 0.9em; /* Reduz o tamanho da resposta */
+        padding: 8px 15px;
+    }
+}
+

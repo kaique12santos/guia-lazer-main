@@ -91,8 +91,17 @@ document.addEventListener("DOMContentLoaded", function () {
             h1.style.fontSize = ""; // Remove estilo inline
         }
     });
+}); 
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleSearchButton = document.getElementById("toggle-search");
+    const searchBox = document.querySelector(".box-search");
+
+    toggleSearchButton.addEventListener("click", () => {
+        searchBox.classList.toggle("show"); // Alterna a classe `show` para exibir ou ocultar
+    });
 });
 const video = document.getElementById("videoIntro");
         
         // Ajusta a taxa de reprodução (1.0 é normal, valores menores tornam o vídeo mais lento)
         video.playbackRate = 0.5;
+       
