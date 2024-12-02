@@ -21,6 +21,23 @@ function toggleFAQ(element) {
         icon.textContent = "-";
     }
 }
+
+function ativarConfetti() {
+    let params = {
+        particleCount: 500, 
+        spread: 90, 
+        startVelocity: 70, 
+        origin: { x: 0, y: 0.5 }, 
+        angle: 45 
+    };
+
+    confetti(params);
+
+    params.origin.x = 1;
+    params.angle = 135;
+    confetti(params);
+}
+
 const emailsCadastrados = ["teste@gmail.com", "usuario@exemplo.com"]; // Simulação de emails cadastrados
 
 function enviarFormulario(event) {
@@ -66,9 +83,13 @@ function enviarFormulario(event) {
     XLSX.utils.book_append_sheet(workbook, worksheet, "Dados do Formulário");
     XLSX.writeFile(workbook, "dados_formulario.xlsx");
 
+
     alert("Formulario Enviado com Sucesso!");
+    ativarConfetti();
     document.getElementById("formularioCadastro").reset();
 }
+
+
 
 function mascaraTelefone(input) {
     input.value = input.value

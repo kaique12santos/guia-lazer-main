@@ -20,7 +20,6 @@ h2, h3 {
     color: #333;
 }
 
-
 label {
     display: block;
     margin-bottom: 5px;
@@ -49,9 +48,9 @@ textarea {
 
 select {
     -webkit-appearance: none; 
-   -moz-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 10px center; /* Adiciona uma seta customizada */
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 10px center;
     padding-right: 30px; 
 }
 

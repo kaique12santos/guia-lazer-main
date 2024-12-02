@@ -6,13 +6,13 @@
     <title>Formulario de inscrição</title>
     <style>@import url(css/form.css);</style>
     <link rel="shortcut icon" href="imagens/iconLogo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
     <form action="#" method="post" onsubmit="enviarFormulario(event)" id="formularioCadastro">
         <h2>Formulario de Solicitação de Cadastro de Comercio</h2>
-
-        
+   
         <label>Nome:</label>
         <input type="text" id="txt_nome" maxlength="50" placeholder="informe o nome completo" required>
         
@@ -21,8 +21,7 @@
         
         <label>Telefone:</label>
         <input type="tel" id="txt_tel" maxlength="15" placeholder="(00) 00000-0000" oninput="mascaraTelefone(this)">
-
-        
+     
         <h3>Detalhes do Comércio</h3>
         <label>Nome do Comércio: </label>
         <input type="text" name="nomeComercio" id="txt_nomeComercio" placeholder="Nome do seu comércio" required>
@@ -59,13 +58,11 @@
 
         <label>CEP: </label>
         <input type="text" name="CEP" id="txt_CEP" maxlength="9" placeholder="Ex: 00000-000" required oninput="mascaraCEP(this)">
-
-        
+      
         <h3>Descrição dos Produtos/Serviços</h3>
         <label>Descrição do Comércio</label><br>
         <textarea placeholder="Descreva o comércio, suas atividades oferecidas/serviços" maxlength="1250" name="descricaoComercio"  required></textarea>
-
-        
+     
         <h3>Redes Sociais e Site</h3>
         <label>Website: </label>
         <input type="url" name="websiteComercio" placeholder="Ex: http://www.seusite.com">
@@ -84,8 +81,7 @@
 
         <label for="imagens">Envie até 5 imagens do comércio:</label>
         <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple onchange="verificarLimiteImagens()">
-        
-       
+            
         <h3>Aceitação dos Termos</h3>
         <div class="aceitacao-termos">
             <input type="checkbox" id="aceite_termos" name="aceite_termos" required>
@@ -94,6 +90,7 @@
         
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
+        
     </form>
     <script src="Javascript/script.js"></script>
 </body>
