@@ -95,54 +95,54 @@ p {
 }
 
 @media (max-width: 768px) {
-    body {
-        margin: 10px; /* Reduz a margem em dispositivos menores */
-    }
+body {
+    margin: 10px; 
+}
 
-    form {
-        max-width: 90%; /* Expande o formulário para ocupar mais espaço */
-        padding: 15px; /* Ajusta o preenchimento */
-        box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1); /* Reduz o sombreamento */
-    }
+form {
+    max-width: 90%; 
+    padding: 15px; 
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1); 
+}
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    input[type="url"],
-    select,
-    textarea {
-        width: 100%; /* Garante que ocupem toda a largura do formulário */
-        padding: 8px; /* Reduz o preenchimento para economizar espaço */
-        font-size: 0.9em; /* Ajusta o tamanho da fonte */
-    }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: 100%; 
+    padding: 8px; 
+    font-size: 0.9em; 
+}
 
-    input[type="submit"],
-    input[type="reset"] {
-        padding: 10px 15px; /* Reduz o preenchimento */
-        font-size: 1em; /* Ajusta o tamanho da fonte */
-        margin-right: 5px; /* Reduz o espaço entre os botões */
-    }
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 15px; 
+    font-size: 1em; 
+    margin-right: 5px; 
+}
 
-    textarea {
-        height: 100px; /* Ajusta a altura para dispositivos menores */
-    }
+textarea {
+    height: 100px; 
+}
 
-    .form-group {
-        margin-bottom: 15px; /* Reduz o espaçamento entre grupos de formulário */
-    }
+.form-group {
+    margin-bottom: 15px; 
+}
 
-    h2, h3 {
-        font-size: 1.5em; /* Reduz o tamanho do título para caber melhor */
-        text-align: center; /* Centraliza os títulos */
-    }
+h2, h3 {
+    font-size: 1.5em; 
+    text-align: center; 
+}
 
-    .aceitacao-termos {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
+.aceitacao-termos {
+    flex-direction: column; 
+    align-items: flex-start; 
+}
 
-    #aceite_termos {
-        margin-bottom: 10px; /* Garante espaçamento adequado */
-    }
+#aceite_termos {
+    margin-bottom: 10px;
+}
 }

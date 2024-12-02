@@ -21,12 +21,11 @@ function toggleFAQ(element) {
         icon.textContent = "-";
     }
 }
-const emailExistente = ["teste@exemplo.com", "email@dominio.com"]; // Simulação de emails cadastrados
+const emailsCadastrados = ["teste@gmail.com", "usuario@exemplo.com"]; // Simulação de emails cadastrados
 
 function enviarFormulario(event) {
-    event.preventDefault(); // Evita o envio do formulário
+    event.preventDefault(); 
 
-    // Obter os elementos do formulário
     const nome = document.getElementById("txt_nome").value.trim();
     const email = document.getElementById("txt_email").value.trim();
     const telefone = document.getElementById("txt_tel").value.trim();
@@ -39,135 +38,181 @@ function enviarFormulario(event) {
     const descricao = document.querySelector("textarea[name='descricaoComercio']").value.trim();
     const aceiteTermos = document.getElementById("aceite_termos").checked;
 
-    // Verificação de campos obrigatórios
-    if (!nome) {
-        alert("Por favor, preencha o campo Nome.");
-        return;
+    if (emailsCadastrados.includes(email)) {
+        alert("E-mail já cadastrado. Por favor, utilize outro.");
+        return; 
+    }else{
+    emailsCadastrados.push(email);
     }
 
-    if (!email) {
-        alert("Por favor, preencha o campo E-mail.");
-        return;
-    }
 
-    if (!telefone) {
-        alert("Por favor, preencha o campo Telefone.");
-        return;
-    }
+    const data = [
+        ["Dados de Cadastro", "Usuario"],
+        ["Nome", nome],
+        ["E-mail", email],
+        ["Telefone", telefone],
+        ["Nome do Comércio", nomeComercio],
+        ["Tipo de Comércio", tipoComercio],
+        ["Endereço", endereco],
+        ["Número", numero],
+        ["Bairro", bairro],
+        ["CEP", cep],
+        ["Descrição", descricao],
+        ["Aceitou os Termos?", aceiteTermos ? "Sim" : "Não"]
+    ];
 
-    if (!nomeComercio) {
-        alert("Por favor, preencha o Nome do Comércio.");
-        return;
-    }
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Dados do Formulário");
+    XLSX.writeFile(workbook, "dados_formulario.xlsx");
 
-    if (tipoComercio === "selecione") {
-        alert("Por favor, selecione o Tipo de Comércio.");
-        return;
-    }
-
-    if (!endereco) {
-        alert("Por favor, preencha o Endereço.");
-        return;
-    }
-
-    if (!numero) {
-        alert("Por favor, preencha o Número do Endereço.");
-        return;
-    }
-
-    if (!bairro) {
-        alert("Por favor, preencha o Bairro.");
-        return;
-    }
-
-    if (!cep) {
-        alert("Por favor, preencha o CEP.");
-        return;
-    }
-
-    if (!descricao) {
-        alert("Por favor, preencha a Descrição do Comércio.");
-        return;
-    }
-
-    if (!aceiteTermos) {
-        alert("Você deve aceitar os termos para continuar.");
-        return;
-    }
-
-    // Verificação de email já existente
-    if (emailExistente.includes(email)) {
-        alert("E-mail já cadastrado.");
-        return;
-    }
-
-    // Mensagem de sucesso
-    alert("Formulário enviado com sucesso!");
-    document.getElementById("formularioCadastro").reset(); // Reseta o formulário
+    alert("Formulario Enviado com Sucesso!");
+    document.getElementById("formularioCadastro").reset();
 }
 
-// Máscara de telefone
 function mascaraTelefone(input) {
     input.value = input.value
-        .replace(/\D/g, "") // Remove caracteres não numéricos
-        .replace(/(\d{2})(\d{5})(\d)/, "($1) $2-$3") // Formata como (00) 00000-0000
-        .replace(/(\d{4,5})-(\d{4})\d+?$/, "$1-$2"); // Ajusta para tamanhos corretos
+        .replace(/\D/g, "")
+        .replace(/(\d{2})(\d{5})(\d)/, "($1) $2-$3") 
+        .replace(/(\d{4,5})-(\d{4})\d+?$/, "$1-$2");
 }
 
-// Máscara de CEP
 function mascaraCEP(input) {
     input.value = input.value
-        .replace(/\D/g, "") // Remove caracteres não numéricos
-        .replace(/^(\d{5})(\d)/, "$1-$2") // Formata como 00000-000
-        .replace(/(-\d{3})\d+?$/, "$1"); // Ajusta para tamanho correto
+        .replace(/\D/g, "")
+        .replace(/^(\d{5})(\d)/, "$1-$2") 
+        .replace(/(-\d{3})\d+?$/, "$1"); 
+    }
+
+function verificarLimiteImagens() {
+    const inputImagens = document.getElementById('imagens');
+    const arquivosSelecionados = inputImagens.files;
+
+    if (arquivosSelecionados.length > 5) {
+        alert("Você pode enviar no máximo 5 imagens.");
+        inputImagens.value = "";
+    }
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Seleciona o botão de menu
-    const menuToggle = document.getElementById("menuToggle");
-
-    // Seleciona os elementos a serem exibidos ou ocultados
-    const headerButtons = document.querySelector(".header-buttons");
-    const boxSearch = document.querySelector(".box-search");
-    const header = document.querySelector("header"); // Seleciona o header para a classe compacta
-
-    // Seleciona o h1 e o h2
-    const h1 = document.querySelector(".logo h1");
-    const h2 = document.querySelector(".titulo-mobile");
-
-    // Adiciona o evento de clique ao botão de menu
-    menuToggle.addEventListener("click", function () {
-        // Alterna a classe "show" nos elementos
-        headerButtons.classList.toggle("show");
-        boxSearch.classList.toggle("show");
-
-        // Alterna a classe "compact-header" no header
-        header.classList.toggle("compact-header");
-
-        // Verifica se a classe compact-header está ativa
-        if (header.classList.contains("compact-header")) {
-            // Substitui o texto do h1 pelo texto do h2
-            h1.textContent = h2.textContent;
-            // Ajusta o tamanho do h1
-            h1.style.fontSize = "1em";
-        } else {
-            // Restaura o texto e o tamanho do h1 ao estado original
-            h1.textContent = "Guia Lazer SP";
-            h1.style.fontSize = ""; // Remove estilo inline
-        }
-    });
-}); 
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleSearchButton = document.getElementById("toggle-search");
-    const searchBox = document.querySelector(".box-search");
+    const menuToggle = document.getElementById("menuToggle");
+    if (menuToggle) {
+        const headerButtons = document.querySelector(".header-buttons");
+        const boxSearch = document.querySelector(".box-search");
+        const header = document.querySelector("header");
+        const h1 = document.querySelector(".logo h1");
+        const h2 = document.querySelector(".titulo-mobile");
 
-    toggleSearchButton.addEventListener("click", () => {
-        searchBox.classList.toggle("show"); // Alterna a classe `show` para exibir ou ocultar
-    });
+        menuToggle.addEventListener("click", () => {
+            headerButtons?.classList.toggle("show");
+            boxSearch?.classList.toggle("show");
+            header?.classList.toggle("compact-header");
+
+           // if (header?.classList.contains("compact-header")) {
+               // h1.textContent = h2?.textContent || "Guia Lazer SP";
+             //   h1.style.fontSize = "1em";
+           // } else {
+               // h1.textContent = "Guia Lazer SP";
+             //   h1.style.fontSize = "";
+           // }
+        });
+    }
+
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const stars = document.querySelectorAll('.star-rating span');
+    const submitReview = document.getElementById('submit-review');
+    const reviewerNameInput = document.getElementById('reviewer-name');
+    const commentInput = document.getElementById('comment');
+    const reviewList = document.getElementById('review-list');
+    let selectedRating = 0;
+
+    if (stars.length) {
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseover', () => {
+                resetStars();
+                highlightStars(index + 1);
+            });
+
+            star.addEventListener('mouseout', () => {
+                resetStars();
+                highlightStars(selectedRating);
+            });
+
+            star.addEventListener('click', () => {
+                selectedRating = index + 1;
+                highlightStars(selectedRating);
+            });
+        });
+    }
+
+if (submitReview && reviewerNameInput && commentInput && reviewList) {
+    submitReview.addEventListener('click', () => {
+        const reviewerName = reviewerNameInput.value.trim();
+        const comment = commentInput.value.trim();
+
+        if (!reviewerName) {
+            alert('Por favor, informe seu nome.');
+            return;
+        }
+
+        if (!selectedRating) {
+            alert('Por favor, selecione uma avaliação.');
+            return;
+        }
+
+        if (!comment) {
+            alert('Por favor, escreva um comentário.');
+            return;
+        }
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <div>
+                <strong>${reviewerName}</strong> - 
+                <span class="review-stars">${'★'.repeat(selectedRating)}${'☆'.repeat(5 - selectedRating)}</span>
+            </div>
+            <p>${comment}</p>
+        `;
+        reviewList.appendChild(li);
+
+        selectedRating = 0;
+        resetStars();
+        reviewerNameInput.value = '';
+        commentInput.value = '';
+    });
+}
+
+function highlightStars(rating) {
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('hovered');
+    }
+}
+
+function resetStars() {
+    stars.forEach(star => {
+        star.classList.remove('hovered', 'selected');
+    });
+}
+});
+
+const subMenus = document.querySelectorAll('.sub-menu');
+
+subMenus.forEach(subMenu => {
+  subMenu.style.display = 'none';
+
+  const categoryItem = subMenu.parentElement;
+  categoryItem.addEventListener('mouseover', () => {
+    subMenu.style.display = 'block';
+  });
+  categoryItem.addEventListener('mouseout', () => {
+    subMenu.style.display = 'none'; 
+  });
+});
+
 const video = document.getElementById("videoIntro");
-        
-        // Ajusta a taxa de reprodução (1.0 é normal, valores menores tornam o vídeo mais lento)
-        video.playbackRate = 0.5;
-       
+if (video) {
+    video.playbackRate = 0.5; 
+}

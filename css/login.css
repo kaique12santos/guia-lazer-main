@@ -1,10 +1,7 @@
 @charset "UTF8";
-
 *{
     margin: 0; 
-    padding: 0; 
-    
-    
+    padding: 0;   
 }
 
 body{
@@ -20,26 +17,21 @@ header{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: flex-end;
+    text-align: right;
 }
-h1{
-    color: #e04938;
-    font-size: 2.06em;
-}
+
 button{
     font-weight: bold;
     
 }
-.logo{
-    margin-left: auto;
-    padding: 10px;
-}
+
 .img1{
-    height: 100px;
-    width: 200px;
+    height: 100%;
+    width: 20%;
    
 }
 .login-items{
-    background-color: rgb(244, 244, 244);
+    background-color: #33333311;
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px; 
     flex-grow: 1; 
@@ -51,7 +43,7 @@ button{
 
 .login{
     display: flex;
-    background-color:#f4f4ffff;
+    background-color:transparent;
     padding: 10px;
     gap: 15px;
     justify-content: center;
@@ -62,10 +54,9 @@ button{
     border-radius: 10px;
     max-width: 1000px;
     height: auto;
-    width: 90%;
+    width: 40%;
     margin-top: auto; 
-    margin-bottom: auto;
-    
+    margin-bottom: auto;   
 }
 
 .email{
@@ -88,8 +79,7 @@ button{
     background-color: #E9FFF4;
     border: solid 2px #8f8f8f;
     border-radius: 30px;
-    width: 350px;
-    
+    width: 350px;    
 }
 
 button{
@@ -158,7 +148,6 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #000000;
-
 }
 .social {
     display: flex;
@@ -166,83 +155,83 @@ footer {
     align-items: center;
     margin: 5px;
     font-size: 28px;
-  }
-  .social a {
+}
+.social a {
     color: #2D1F28;
     text-decoration: none;
     margin: 10px;
-  }
-  .social:hover a {
+}
+.social:hover a {
     opacity: 0.3;
     transition: 0.5s;
-  }
-  .social:hover a:hover {
+}
+.social:hover a:hover {
     opacity: 1;
     transition: 0.5s;
-  }
+}
 
-  .titulo-mobile{
+.titulo-mobile{
     display: none;
     color: #e04938;
     border: none;
 }
 
-  @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .paragrafo-h1{
-        display: none;
-    }
+@media (max-width: 768px) {
+header {
+    flex-direction: column;
+    align-items: center;
+}
+.paragrafo-h1{
+    display: none;
+}
 
-    .logo {
-        margin: 0;
-        padding: 5px;
-    }
+.logo {
+    margin: 0;
+    padding: 5px;
+}
 
-    .img1 {
-        height: 80px;
-        width: 150px;
-    }
+.img1 {
+    height: 80px;
+    width: 150px;
+}
 
-    .login {
-        flex-direction: column;
-        padding: 10px;
-        width: 95%;
-    }
+.login {
+    flex-direction: column;
+    padding: 10px;
+    width: 95%;
+}
 
-    .botoes_login_esqueci{
-        margin-left: 10%;
-    }
-    .entrada_texto{
-        width: 80%;
-    }
-    .email, .senha {
-        width: 100%;
-        padding: 15px;
-        font-size: 0.9em;
-    }
+.botoes_login_esqueci{
+    margin-left: 10%;
+}
+.entrada_texto{
+    width: 80%;
+}
+.email, .senha {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+}
 
-    button {
-        width: 120px;
-        font-size: 0.7em;
-        padding: 5px;
-    }
+button {
+    width: 120px;
+    font-size: 0.7em;
+    padding: 5px;
+}
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
 
-    .footer-section {
-        width: 90%;
-        margin-bottom: 15px;
-    }
+.footer-section {
+    width: 90%;
+    margin-bottom: 15px;
+}
 
-    .footer-bottom {
-        font-size: 0.75em;
-    }
+.footer-bottom {
+    font-size: 0.75em;
+}
 }
 
 

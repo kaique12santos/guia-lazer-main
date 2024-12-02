@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de inscrição</title>
     <style>@import url(css/form.css);</style>
-    
-    <link rel="shortcut icon" href="imagens/logo12.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/iconLogo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
     <form action="#" method="post" onsubmit="enviarFormulario(event)" id="formularioCadastro">
@@ -83,7 +83,7 @@
         <input type="url" name="XComercio" placeholder="Ex: https://x.com/seunegocio">
 
         <label for="imagens">Envie até 5 imagens do comércio:</label>
-        <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple>
+        <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple onchange="verificarLimiteImagens()">
         
        
         <h3>Aceitação dos Termos</h3>
