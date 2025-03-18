@@ -3,38 +3,37 @@ html, body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    height: 100%; /* Garante que o body sempre tenha 100% da altura */
+    height: 100%; 
     box-sizing: border-box;
     
 }
 
 .content-wrapper {
     justify-content: space-between;
-     /* Centraliza horizontalmente */
     align-items: center;
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    min-height: 100vh; /* Faz a div ocupar a altura total da viewport */
-    width: 100%; /* Faz a div ocupar toda a largura */
-    background-color: #fcfcfc; /* Cor de fundo */
+    flex-direction: column; 
+    min-height: 100vh; 
+    width: 100%; 
+    background-color: #fcfcfc; 
 }
 
 .introducao {
     
-    height: 150px; /* Altura da faixa no final */
-    width: 100%; /* Ocupa toda a largura da página */
-    display: flex; /* Centraliza o vídeo dentro da div */
-    align-items: center; /* Alinha verticalmente o vídeo no centro */
-    justify-content: center; /* Alinha horizontalmente o vídeo no centro */
-    position: relative; /* Permite controle sobre o posicionamento */
-    overflow: hidden; /* Garante que o vídeo não extrapole a área */
+    height: 150px; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 video {
-    width: 100%; /* Preenche toda a largura da div */
-    height: 100%; /* Preenche toda a altura da div */
-    object-fit: cover; /* Faz o vídeo preencher a área proporcionalmente */
-    position: absolute; /* Garante que o vídeo permaneça fixo dentro da faixa */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    position: absolute; 
 }
 .faq-container {
     text-align: center;
@@ -210,7 +209,7 @@ h1 {
     }
 
     .img1 {
-        height: 80px; /* Reduz a altura */
+        height: 80px;
     }
 
     footer {
@@ -224,27 +223,27 @@ h1 {
     }
 
     .footer-section {
-        width: 100%; /* Cada seção ocupa 100% */
+        width: 100%; 
         margin-bottom: 10px;
     }
 
     .social {
-        font-size: 1.5em; /* Reduz o tamanho dos ícones sociais */
+        font-size: 1.5em; 
         flex-wrap: wrap;
     }
 
     h1 {
-        font-size: 1.8em; /* Ajuste do título */
+        font-size: 1.8em; 
         margin-bottom: 15px;
     }
 
     .faq-question {
-        font-size: 0.9em; /* Reduz o tamanho da pergunta */
+        font-size: 0.9em; 
         padding: 8px 15px;
     }
 
     .faq-answer {
-        font-size: 0.9em; /* Reduz o tamanho da resposta */
+        font-size: 0.9em; 
         padding: 8px 15px;
     }
 }
