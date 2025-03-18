@@ -129,14 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
             headerButtons?.classList.toggle("show");
             boxSearch?.classList.toggle("show");
             header?.classList.toggle("compact-header");
-
-           // if (header?.classList.contains("compact-header")) {
-               // h1.textContent = h2?.textContent || "Guia Lazer SP";
-             //   h1.style.fontSize = "1em";
-           // } else {
-               // h1.textContent = "Guia Lazer SP";
-             //   h1.style.fontSize = "";
-           // }
         });
     }
 
